@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber OSINT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="cyber-dashboard">
+        <header>
+            <h1>Cyber OSINT Dashboard</h1>
+        </header>
+        <section class="terminal">
+            <h2>Simulated Terminal</h2>
+            <div class="terminal-output">
+                <p>Loading system information...</p>
+                <p>Connected to network: <span class="status">online</span></p>
+            </div>
+        </section>
+        <section class="data-visualization">
+            <h2>Dynamic Data Visualizations</h2>
+            <div class="chart">
+                <div class="bar" style="height: 70%; animation-delay: 0s;"></div>
+                <div class="bar" style="height: 50%; animation-delay: 0.1s;"></div>
+                <div class="bar" style="height: 90%; animation-delay: 0.2s;"></div>
+                <div class="bar" style="height: 30%; animation-delay: 0.3s;"></div>
+            </div>
+        </section>
+        <section class="network-map">
+            <h2>Network Map</h2>
+            <div class="network-node" style="top: 20%; left: 30%;"></div>
+            <div class="network-node" style="top: 50%; left: 70%;"></div>
+            <div class="network-node" style="top: 80%; left: 40%;"></div>
+            <div class="network-node" style="top: 10%; left: 80%;"></div>
+            <div class="connections"></div>
+        </section>
+        <section class="encryption">
+            <h2>Encryption/Decryption Effects</h2>
+            <div class="encryption-effect">
+                <span class="encrypt">Encrypted Data: </span>
+                <span class="decrypted">****</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
