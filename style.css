@@ -1,0 +1,135 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    margin: 0;
+}
+
+#cyber-dashboard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pulsating-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00ffcc;
+    position: absolute;
+    bottom: 20px;
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.typing-effect {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00ffcc;
+    width: 0;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.network-visualization {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.node {
+    width: 10px;
+    height: 10px;
+    background-color: #00ffcc;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.line {
+    position: absolute;
+    background-color: rgba(0, 255, 204, 0.5);
+    z-index: 1;
+    width: 2px;
+    transform-origin: top left;
+    animation: draw-line 3s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+.data-packet {
+    width: 8px;
+    height: 8px;
+    background-color: #ff6f61;
+    border-radius: 4px;
+    position: absolute;
+    animation: move-packet 3s linear infinite;
+}
+
+@keyframes move-packet {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(calc(100vw - 8px), calc(100vh - 8px));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+```
